@@ -44,6 +44,7 @@ button {
     border: none;
     background: transparent;
     padding-top: 3px;
+    cursor: pointer;
     position: relative;
 }
 .round {
