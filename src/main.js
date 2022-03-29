@@ -12,10 +12,10 @@ worker.start()
 Vue.use(VCalendar);
 Vue.directive('click-outside', {
   bind: function (element, binding, vnode) {
-    element.clickOutsideEvent = function (event) {  //  check that click was outside the el and his children
-      if (!(element === event.target || element.contains(event.target) || binding.arg === event.target.id)) { // and if it did, call method provided in attribute value
+    element.clickOutsideEvent = function (event) {
+      if (!(element === event.target || element.contains(event.target))) {
         vnode.context[binding.expression](event);
-        // binding.value(); run the arg
+
       }
     };
     document.body.addEventListener('click', element.clickOutsideEvent)

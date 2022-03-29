@@ -71,11 +71,7 @@ nav {
         font-size: 14px;
         letter-spacing: 0px;
         color: #898989;
-        &::before {
-            transform: scale(0);
-            transition-property: transform;
-            transition-delay: 5ms;
-        }
+
         &.active {
             /* box-shadow: -1px -2px 5px 0px rgba(0, 0, 0, 0.21); */
             opacity: 1;
@@ -83,7 +79,7 @@ nav {
             position: relative;
             &::before {
                 content: "";
-                transform: scale(1);
+
                 background: #8279f2;
                 height: 1px;
                 position: absolute;
@@ -92,11 +88,20 @@ nav {
                 width: 95%;
                 text-align: center;
                 right: 6px;
+                animation: border-shrink 0.5s ease-in;
             }
         }
         span {
             margin-left: 0.5rem;
         }
+    }
+}
+@keyframes border-shrink {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 </style>
