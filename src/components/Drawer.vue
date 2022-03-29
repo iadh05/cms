@@ -47,6 +47,7 @@ export default {
     max-width: 81px;
     box-shadow: 0px 3px 20px #e4edf5;
     border-radius: 0px 11px 11px 0px;
+    height: 100%;
     .menu-list {
         list-style: none;
         padding: 0.5rem 0;
